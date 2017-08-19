@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgba(76,76,76,1);
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(100%, rgba(19,19,19,1)));
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+    padding:10px;
+    font-size: 100%;
+    /* font-family: 'Roboto Mono', monospace; */
+    /* font-family: 'Roboto Slab', serif; */
+     font-family: 'Roboto', sans-serif; 
+    padding-left:25px;
+}
+#localvideo{
+    width:300px;
+    position: absolute;
+    bottom :20px;
+    right:20px;
+    border:1px solid rgba(255,255,255,.3);
+    background-color: rgba(0,0,0,.9);
+}
+#remotevideo{
+    width:1000px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius: 2px;
+    background-color: rgba(0,0,0,.9);
+    margin-top:70px;
+}
+p.roomname{
+    font-size: 1.4em;
+    color:rgba(255,255,255,.9);
+    margin-top:20px;
+    margin-bottom: 15px;
+    line-height: 1;
+    padding-left:35px;
+}
+header{
+    background-color: #232323;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    height: 60px;
+    border-bottom: 1px solid #0a0909;
+}
+ul{
+    position: right;
+    width:300px;
+    position: absolute;
+    top:80px;
+    right:20px;
+    list-style-type: none;
+    color:rgba(255,255,255,.9);
+}
+.btn{
+    padding:5px 3px;
+    width:80px;
+    cursor: pointer;
+}
+.btn-group{
+    padding-top:10px;
+   
+}

@@ -1,0 +1,32 @@
+{
+  "name": "lovecam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup": "^0.47.6",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.1.0",
+    "rollup-plugin-css-only": "^0.2.0",
+    "rollup-plugin-livereload": "^0.4.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-serve": "^0.4.0",
+    "rollup-watch": "^4.3.1"
+  },
+  "engines": {
+    "node": "6.10.0"
+  },
+  "dependencies": {
+    "node-static": "^0.7.9",
+    "socket.io": "^2.0.3"
+  }
+}

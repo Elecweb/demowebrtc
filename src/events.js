@@ -1,0 +1,13 @@
+export const JOIN_ROOM         = 'JOIN_ROOM';
+export const JOIN_ROOM_SUCCESS = 'JOIN_ROOM_SUCCESS';
+export const JOIN_ROOM_FAIL    = 'JOIN_ROOM_FAIL';
+export const GET_ICE           = 'GET_ICE';
+export const SEND_ICE          = 'SEND_ICE';
+export const GET_ACCEPT        = 'GET_ACCEPT';
+export const ACCEPT            = 'ACCEPT';
+export const OFFER             = 'OFFER';
+export const ANSWER            = 'ANSWER';
+export const GET_OFFER         = 'GET_OFFER';
+export const GET_ANSWER        = 'GET_ANSWER';
+export const GET_ICE_BACK      = 'GET_ICE_BACK';
+export const SEND_ICE_BACK     = 'SEND_ICE_BACK';
