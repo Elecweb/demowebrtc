@@ -2,7 +2,7 @@ import '../css/main.css';
 import { setupVideo } from './helper.js';
 import io from 'socket.io-client';
 import { JOIN_ROOM,JOIN_ROOM_SUCCESS,JOIN_ROOM_FAIL,SEND_ICE,GET_ICE,GET_ACCEPT,ACCEPT,OFFER,GET_OFFER,GET_ANSWER,GET_ICE_BACK,SEND_ICE_BACK,ANSWER } from './events';
-
+console.log('update!');
 // const room = window.prompt("What's the room name?").toLocaleLowerCase();
 const room = 'testroom';
 const socket = io();
