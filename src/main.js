@@ -62,7 +62,9 @@ const setUpViedeoCam = ()=>{
 }
 
 const setupStream = () => {
+    console.log('===========================================================');
     console.log('videostream.local',videostream.local);
+    console.log('===========================================================');
     mypeer.rtc.addStream(videostream.local);
     mypeer.rtc.onaddstream = (event)=>{
         console.log(event,'>>magic');
@@ -73,12 +75,12 @@ const setupStream = () => {
 const setUpIceCandidate = () => {
     return new Promise((resolve, reject)=>{
         mypeer.rtc.onicecandidate = (event)=> {
-            console.log('ice from caller');
+            // console.log('ice from caller');
             resolve(event.candidate);
             if(event.candidate){
                 mypeer.ice_candidate = event.candidate;
                 socket.emit(SEND_ICE,JSON.stringify(mypeer.ice_candidate));
-                console.log('>>SEND_ICE');
+                console.log('>>SEND_ICE',JSON.stringify(mypeer.ice_candidate));
             }
             
             // sendIceCandidate(ice);
@@ -91,12 +93,12 @@ const calling = () => {
     setUpViedeoCam().then(()=>{
         setUpIceCandidate().then((ice)=>{
             
-            console.log('ice set to ice_candidate');
+            // console.log('ice set to ice_candidate');
         });
         mypeer.rtc.createOffer().then((desc)=>{
             mypeer.rtc.setLocalDescription(desc);
             sendSdp(desc,OFFER);
-            console.log('>>SEND OFFER');
+            // console.log('>>SEND OFFER');
         });
     });
     
@@ -106,7 +108,7 @@ const accept = ()=> {
     setUpViedeoCam().then(()=>{
         setUpIceCandidate().then((ice)=>{
             
-            console.log('ice set to ice_candidate');
+            // console.log('ice set to ice_candidate');
         });
         mypeer.rtc.createAnswer().then((desc)=>{
             mypeer.rtc.setLocalDescription(desc);
@@ -164,7 +166,7 @@ const listenToServer = () => {
     });
 
     socket.on(GET_ICE,(ice)=>{
-        console.log(">>GET_ICE");
+        console.log(">>GET_ICE",ice);
         mypeer.rtc.addIceCandidate(new RTCIceCandidate(JSON.parse(ice)));        
     });
 
